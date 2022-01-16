@@ -1,4 +1,0 @@
-How to run this
-
-just run python manage.py runserver
-
