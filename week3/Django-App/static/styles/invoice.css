@@ -1,0 +1,50 @@
+
+.page-title{
+    font-family: 'Acme', sans-serif;
+}
+.cart-div{
+    margin-top: 3rem;
+}
+table{
+    padding: 2rem;
+    box-shadow: 1px 1px 6px 2px grey;
+}
+tbody{
+    padding: 2rem;
+}
+tr{
+    height: max-content;
+}
+.cart-table{
+    text-align: center;
+    margin: auto;
+}
+.cart-name{
+    padding: 1rem ;
+    font-size: 2rem;
+    font-family: 'Acme', sans-serif;
+    color: rgb(3, 32, 128);
+}
+.total-price{
+    text-align: right;
+}
+.price{
+    text-align: right;
+    padding: 1rem 1rem 1rem 2rem ;
+}
+.sub-total{
+    border: 1px solid rgb(104, 103, 103);
+    font-weight: 900;
+    background-color: rgba(185, 183, 183, 0.781);
+}
+.item{
+    padding: .5rem 0;
+    font-size: 1.75rem;
+}
+.count{
+    padding-right: 2rem !important;
+}
+.item-count{
+    text-align: right;
+    padding-right: 1rem;
+}

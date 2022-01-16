@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Order Form{% endblock title %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center page-title">Order Form</h1>
+   
+    <form class="contact-form" action="{% url 'order' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <select name = "meat"class="form-control">
+            <option value="">Choose meat</option>
+            <option value="Baked Chicken">Baked Chicken</option>
+            <option value="Fried Chicken">Fried Chicken</option>
+            <option value="Pork Loin">Pork Loin</option>
+            <option value="Pork Chops">Pork Chops</option>
+            <option value="Barbecue Ribs">Barbecue Ribs</option>
+            <option value="Brisket">Brisket</option>
+        </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Side One</label>
+            <select name = "side1"class="form-control">
+                <option value="">Choose side</option>
+                <option value="Mash Potatoes">Mash Potatoes</option>
+                <option value="Turnip Greens">Turnip Greens</option>
+                <option value="Baked Beans">Baked Beans</option>
+                <option value="Baby Red Potatos">Baby Red Potatos</option>
+                <option value="Macaroni">Macaroni</option>
+            </select>
+            </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Price</label>
+            <select name = "side2"class="form-control">
+                <option value="">Choose side</option>
+                <option value="Mash Potatoes">Mash Potatoes</option>
+                <option value="Turnip Greens">Turnip Greens</option>
+                <option value="Baked Beans">Baked Beans</option>
+                <option value="Baby Red Potatos">Baby Red Potatos</option>
+                <option value="Macaroni">Macaroni</option>
+            </select>
+        </div> 
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Number of people</label>
+            <select name = "price"class="form-control">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit order</button>   
+    </form>    
+</div>
+ 
+  
+
+{% endblock %}
