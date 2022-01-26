@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Edit Menu{% endblock title %}
+{% block content %}
+<div class="container"> 
+
+    <h1 class="text-center page-title">Add Menu Item</h1>
+   
+    <form class="contact-form" action="{% url 'menu' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="editForm">Meat Name</label>
+            <input type="text" class="form-control" id="editForm" placeholder="Meat Name" name="name">
+        </div>
+        <div class="form-group">
+                <label for="editForm">Description</label>
+                <textarea type="text" class="form-control" id="editForm" placeholder="Description" name="description"></textarea>
+            </div>           
+        <button type="submit" class="btn btn-primary mb-2">Submit Food</button>   
+    </form>
+
+    <h1 class="text-center page-title">Add Sides</h1>
+   
+    <form class="contact-form" action="{% url 'sides' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="editForm">Side Name</label>
+            <input type="text" class="form-control" id="editForm" placeholder="Side Name" name="name">
+        </div>        
+        <button type="submit" class="btn btn-primary mb-2">Submit Side</button>   
+    </form>
+
+</div>
+ 
+
+    {% endblock content %}
+
+
+    

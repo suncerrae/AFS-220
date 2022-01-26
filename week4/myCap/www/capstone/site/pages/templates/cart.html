@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid " style=" background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),url(https://media.istockphoto.com/photos/soul-food-1-picture-id605998748?b=1&k=20&m=605998748&s=170667a&w=0&h=aqTYp2KRIzFhvEleipdYTb4u38lMWdX0NjK-GWfj_C4=); background-position: center 75%; background-repeat: no-repeat; background-size: cover;">
+
+        <div class="container">
+            <h1 class="display-4 text-white ">Find Your Cart</h1>
+            <form class="contact-form shadow-none" action="{% url 'cart' %}" method="post" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cartForm" placeholder="Search Name" name="name">
+                </div>           
+                  <button type="submit" class="btn btn-primary mb-2">Search</button>   
+              </form>
+        </div>
+    </div>
+    {% if nodata %}
+        <p class="note text-center mt-5 text-danger">Please enter another name!</p>
+  
+    {% elif show %}
+    <div class="cart-div">
+        <table class="cart-table">
+            <tr >
+                <td class="cart-name">{{name}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="item-count">{{count}} X</td>
+                <td class="item text-left" >{{meat}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="item-count">{{count}} X</td>
+                <td class="item text-left">{{side1}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="item-count">{{count}} X</td>
+                <td class="item text-left">{{side2}}</td>
+                <td></td>
+            </tr>
+            <tr style=" border: none; box-shadow: inset 3px 3px 20px 3px rgb(145, 144, 144),
+            1px 1px 1px 1px rgb(149, 151, 149),
+            -1px -1px 1px 1px rgb(149, 151, 149),
+            inset -3px -3px 20px 3px rgb(145, 144, 144);" class="sub-total">
+                <td></td>
+                <td></td>
+                <td ></td>
+                <td class="count">Total: $ {{price}}.00</td>
+            </tr>
+
+        </table>
+    </div>
+    {% else %}
+    
+    {% endif %}
+{% endblock %}

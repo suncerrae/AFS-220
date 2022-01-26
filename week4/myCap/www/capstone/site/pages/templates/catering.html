@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron jumbotron-fluid " style="height: 40vh; background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),url(https://images.unsplash.com/photo-1559852925-6a5a7125525b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c291dGhlcm4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60); background-repeat: no-repeat; background-size: cover; background-position: center 60%;">
+
+        <div class="container">
+            <h1 class="display-4 text-white ">Catering</h1>
+            <h3 class="lead text-white text-center">We will serve all your catering needs!</h3>
+        </div>
+        
+    </div>
+
+    <h1>We Will love to cater to your party</h1>
+    <p class="h3">Our catering service will ensure that your guests are well taken care of. </p>
+    <p class="h3">Taste of Heaven Catering is committed to providing nothing less than impeccable service at a affordable price. Southern Hospitality and comfort food for every occasion is guaranteed to make your event a memorable experience. Whether it's a wedding, corporate event, social, or special occasion our team and their expertise are ready to assist you. We have several menu options and we also offer one on one personalization!</p>
+   <button type="submit" class="btn btn-primary mb-2" onclick="location.href='{% url 'cateringOrder' %}'">Order Now</button> 
+
+</div>
+
+{% endblock %}

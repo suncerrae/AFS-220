@@ -1,0 +1,10 @@
+version: "3"
+
+services: 
+  sun-kipp-django-apache:
+    build: .
+    container_name: sun-kipp-django-apache
+    ports:
+      - '8000:80'
+    volumes: 
+      - ./www:/var/www/html

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center page-title">Menu</h1>  
+
+            {% for item in menu %}
+           
+                <ul>
+                    <li>
+                        
+                        <div class="border-bottom border-info">
+                            <h2 class="card-title text-center pl-3">{{item.name}}</h2>          
+                            <h3 class="menu-card-text">{{item.description}}</h3>
+                            <h3 class="menu-card-subtitle mb-2 text-muted ">${{item.price | floatformat:2}} Per Person</h3>
+                        </div>
+                    </li>
+                    
+                </ul>               
+                
+             
+            {% endfor %} 
+
+            <div>
+                <h2 class="text-center"><strong>Sides</strong></h2>
+                <ul>
+                    <li>
+                        <div>
+                            {% for item in side %}
+                                <h3>{{item.name}}</h3>
+                            {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+            </div>          
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron jumbotron-fluid " style="height: 45vh; background-image: url(https://images.unsplash.com/photo-1613223715939-fc8748dbe885?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvdXRoZXJuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+        <div class="container">
+            <h1 class="display-4 text-white ">Got Questions</h1>
+            <h2 class="lead text-white text-center">Reach out to us and let us know if there is anything we can do for you</h3>
+            
+        </div>
+    </div>
+  
+    {% if submitted %}
+        <p class="note text-center">Your message was submitted successfully. Thank you!</p>
+ 
+    {% else %}
+    <form class="contact-form" action="{% url 'contact' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="contactForm">Name</label>
+            <input type="text" class="form-control" id="contactForm" placeholder="Name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="contactForm">Email</label>
+            <input type="email" class="form-control" id="contactForm" placeholder="Email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="contactForm">Subject</label>
+            <input type="text" class="form-control" id="contactForm" placeholder="Subject" name="subject">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        
+    </form>
+    {% endif %}
+</div>
+
+{% endblock content %}
+
+
+    

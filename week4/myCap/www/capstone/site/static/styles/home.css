@@ -1,0 +1,45 @@
+
+
+.home-img-div{
+    margin: 2vh auto;
+    text-align: center;    
+}
+
+.home-img {
+    height: 50vh;
+    box-shadow: 1px 1px 5px 2px rgb(32, 32, 32);
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+.services-h3{
+    text-align: center;
+}
+
+.jumbotron {
+    background-size: cover;
+    height: 32vh;
+    width: auto;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+
+.carousel-item{
+    height: 25vh;
+    }
+
+.jumbo-color{
+    color: white;
+    font-size: 2rem;
+    }
+
+@media only screen and (min-width: 501px) and (max-width: 1024px){
+    .jumbotron {
+        height: 25vh;
+      }
+  
+    }

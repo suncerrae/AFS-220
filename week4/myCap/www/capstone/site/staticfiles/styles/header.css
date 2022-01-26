@@ -1,0 +1,15 @@
+.header-background{
+    grid-column: 1/-1;
+    grid-row: 1;
+    margin:  0;
+}
+
+.header-message{
+    font-size: 5rem;
+    text-align: left;
+    padding: 0;
+    color: rgb(255, 217, 0);
+    text-shadow: 2px 2px #2e270a;
+    margin: 0;
+    padding: 5vh 0 0 2vh;
+}
