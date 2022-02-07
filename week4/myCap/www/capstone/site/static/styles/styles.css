@@ -3,7 +3,7 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: rgb(15, 11, 11);
 }
 body{
     height: 100vh;
@@ -25,7 +25,7 @@ body{
     font-size: 3rem ;
     margin-right: auto;
     margin-left: auto;
-    color: rgb(28, 91, 184);
+    color: rgb(223, 82, 1);
     text-decoration: none;
 }
 .nounderline{
@@ -48,13 +48,13 @@ ul{
     width: 100%;    
 }
 .gap {
-	height: 30px;
+	height: 50px;
 	width: 100%;
 	clear: both;
 	display: block;
 }
 .footer {
-	background: #002147;
+	background: #013b25;
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -94,7 +94,7 @@ ul{
 	margin-left: 0;
 	padding-left: 0;
 	margin-top: 0px;
-	color: #7F8C8D;
+	color: #0e974c;
   padding: 0 0 8px 0;
 }
 
@@ -137,7 +137,7 @@ footer{
 }
 
 .footer a {
-	color: #78828D
+	color: #e2e7ec
 }
 
 .footer-bottom {
