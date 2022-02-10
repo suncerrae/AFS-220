@@ -15,8 +15,3 @@ ADD ./coder_cafe_site.conf /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 
-# COPY requirements.txt  requirements.txt
-# RUN pip3 install -r requirements.txt
-# COPY . .
-
-# CMD [ "python3", "apache2ctl","-D", "runserver","FOREGROUND", "0.0.0.0:8000"] 
